@@ -1,0 +1,12 @@
+.board-main {
+    height: 80vh;
+    width: 50vw;
+    /* border: 1px solid red; */
+}
+
+@media screen and (max-width: 750px){
+    .board-main {
+        height: 80vh;
+        width: 98vw
+    }
+}
