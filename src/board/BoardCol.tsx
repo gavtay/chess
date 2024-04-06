@@ -6,34 +6,34 @@ import './BoardCol.css'
 export interface SquareColorProp {
     squareColor: string
     colLet: string
-    squareNum: string
+    rowNum: string
 }
 
 const BoardRow: FunctionComponent<BoardRowProps> = (props): JSX.Element => {
     let squareColorWhite: string = 'square-color-white';
     let squareColorBlack: string = 'square-color-black';
-    let squareOne: string = '1';
-    let squareTwo: string = '2';
-    let squareThree: string = '3';
-    let squareFour: string = '4';
-    let squareFive: string = '5';
-    let squareSix: string = '6';
-    let squareSeven: string = '7';
-    let squareEight: string = '8';
+    let rowOne: string = '1';
+    let rowTwo: string = '2';
+    let rowThree: string = '3';
+    let rowFour: string = '4';
+    let rowFive: string = '5';
+    let rowSix: string = '6';
+    let rowSeven: string = '7';
+    let rowEight: string = '8';
 
     function applyId() {
         if (props.colVal === 0) {
             return (
                 <>
                     <div id='even-col' className='col-container'>
-                        <BoardSquare colLet={props.colLet} squareNum={squareOne} squareColor={squareColorWhite}/>
-                        <BoardSquare colLet={props.colLet} squareNum={squareTwo} squareColor={squareColorBlack}/>
-                        <BoardSquare colLet={props.colLet} squareNum={squareThree} squareColor={squareColorWhite}/>
-                        <BoardSquare colLet={props.colLet} squareNum={squareFour} squareColor={squareColorBlack}/>
-                        <BoardSquare colLet={props.colLet} squareNum={squareFive} squareColor={squareColorWhite}/>
-                        <BoardSquare colLet={props.colLet} squareNum={squareSix} squareColor={squareColorBlack}/>
-                        <BoardSquare colLet={props.colLet} squareNum={squareSeven} squareColor={squareColorWhite}/>
-                        <BoardSquare colLet={props.colLet} squareNum={squareEight} squareColor={squareColorBlack}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowOne} squareColor={squareColorWhite}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowTwo} squareColor={squareColorBlack}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowThree} squareColor={squareColorWhite}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowFour} squareColor={squareColorBlack}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowFive} squareColor={squareColorWhite}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowSix} squareColor={squareColorBlack}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowSeven} squareColor={squareColorWhite}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowEight} squareColor={squareColorBlack}/>
                     </div>
                 </>
             )
@@ -41,14 +41,14 @@ const BoardRow: FunctionComponent<BoardRowProps> = (props): JSX.Element => {
             return (
                 <>
                     <div id='odd-col' className='col-container'>
-                        <BoardSquare colLet={props.colLet} squareNum={squareOne} squareColor={squareColorBlack}/>
-                        <BoardSquare colLet={props.colLet} squareNum={squareTwo} squareColor={squareColorWhite}/>
-                        <BoardSquare colLet={props.colLet} squareNum={squareThree} squareColor={squareColorBlack}/>
-                        <BoardSquare colLet={props.colLet} squareNum={squareFour} squareColor={squareColorWhite}/>
-                        <BoardSquare colLet={props.colLet} squareNum={squareFive} squareColor={squareColorBlack}/>
-                        <BoardSquare colLet={props.colLet} squareNum={squareSix} squareColor={squareColorWhite}/>
-                        <BoardSquare colLet={props.colLet} squareNum={squareSeven} squareColor={squareColorBlack}/>
-                        <BoardSquare colLet={props.colLet} squareNum={squareEight} squareColor={squareColorWhite}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowOne} squareColor={squareColorBlack}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowTwo} squareColor={squareColorWhite}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowThree} squareColor={squareColorBlack}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowFour} squareColor={squareColorWhite}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowFive} squareColor={squareColorBlack}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowSix} squareColor={squareColorWhite}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowSeven} squareColor={squareColorBlack}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowEight} squareColor={squareColorWhite}/>
                     </div>
                 </>
             )
