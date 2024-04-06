@@ -1,5 +1,6 @@
 import './BoardMain.css'
 import BoardCol from './BoardCol';
+import BoardLetters from './BoardLetters';
 
 export interface BoardRowProps {
     colVal: number
@@ -20,15 +21,20 @@ function BoardMain() {
 
     return (
         <>
-            <div className='board-main'>
-                <BoardCol colVal={even} colLet={colA}/>
-                <BoardCol colVal={odd} colLet={colA}/>
-                <BoardCol colVal={even} colLet={colA}/>
-                <BoardCol colVal={odd} colLet={colA}/>
-                <BoardCol colVal={even} colLet={colA}/>
-                <BoardCol colVal={odd} colLet={colA}/>
-                <BoardCol colVal={even} colLet={colA}/>
-                <BoardCol colVal={odd} colLet={colA}/>
+            <div className='main-container'>
+                <div className='board-main'>
+                    <BoardCol colVal={even} colLet={colA}/>
+                    <BoardCol colVal={odd} colLet={colA}/>
+                    <BoardCol colVal={even} colLet={colA}/>
+                    <BoardCol colVal={odd} colLet={colA}/>
+                    <BoardCol colVal={even} colLet={colA}/>
+                    <BoardCol colVal={odd} colLet={colA}/>
+                    <BoardCol colVal={even} colLet={colA}/>
+                    <BoardCol colVal={odd} colLet={colA}/>
+                </div>
+                <div>
+                    <BoardLetters/>
+                </div>
             </div>
         </>
     )
