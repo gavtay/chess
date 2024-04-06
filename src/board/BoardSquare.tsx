@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react';
-import { SquareColorProp } from './BoardRow';
+import { SquareColorProp } from './BoardCol';
 import './BoardSquare.css'
 
 const BoardSquare: FunctionComponent<SquareColorProp> = (props): JSX.Element => {

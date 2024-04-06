@@ -1,25 +1,34 @@
 import './BoardMain.css'
-import BoardRow from './BoardRow';
+import BoardCol from './BoardCol';
 
 export interface BoardRowProps {
-    rowVal: number
+    colVal: number
+    colLet: string
 }
 
 function BoardMain() {
     let even: number = 0;
     let odd: number = 1;
-  
+    let colA: string = 'a';
+    let colB: string = 'b';
+    let colC: string = 'c';
+    let colD: string = 'd';
+    let colE: string = 'e';
+    let colF: string = 'f';
+    let colG: string = 'g';
+    let colH: string = 'h';
+
     return (
         <>
             <div className='board-main'>
-                <BoardRow rowVal={even}/>
-                <BoardRow rowVal={odd}/>
-                <BoardRow rowVal={even}/>
-                <BoardRow rowVal={odd}/>
-                <BoardRow rowVal={even}/>
-                <BoardRow rowVal={odd}/>
-                <BoardRow rowVal={even}/>
-                <BoardRow rowVal={odd}/>
+                <BoardCol colVal={even} colLet={colA}/>
+                <BoardCol colVal={odd} colLet={colA}/>
+                <BoardCol colVal={even} colLet={colA}/>
+                <BoardCol colVal={odd} colLet={colA}/>
+                <BoardCol colVal={even} colLet={colA}/>
+                <BoardCol colVal={odd} colLet={colA}/>
+                <BoardCol colVal={even} colLet={colA}/>
+                <BoardCol colVal={odd} colLet={colA}/>
             </div>
         </>
     )

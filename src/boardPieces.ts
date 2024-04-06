@@ -1,0 +1,18 @@
+let boardPieces: { piece: string, location: string, src: string }[] = [
+    { 'piece': 'blackKing', 'location': 'a1', 'src': './assets/black-king.png' },
+    { 'piece': 'blackQueen', 'location': 'a1', 'src': './assets/black-king.png' },
+    { 'piece': 'blackBishopOne', 'location': 'a1', 'src': './assets/black-king.png' },
+    { 'piece': 'blackBishopTwo', 'location': 'a1', 'src': './assets/black-king.png' },
+    { 'piece': 'blackKnightOne', 'location': 'a1', 'src': './assets/black-king.png' },
+    { 'piece': 'blackKnightTwo', 'location': 'a1', 'src': './assets/black-king.png' },
+    { 'piece': 'blackRookOne', 'location': 'a1', 'src': './assets/black-king.png' },
+    { 'piece': 'blackRookTwo', 'location': 'a1', 'src': './assets/black-king.png' },
+    { 'piece': 'blackPawn', 'location': 'a1', 'src': './assets/black-king.png' },
+    { 'piece': 'blackKing', 'location': 'a1', 'src': './assets/black-king.png' },
+    { 'piece': 'blackKing', 'location': 'a1', 'src': './assets/black-king.png' },
+    { 'piece': 'blackKing', 'location': 'a1', 'src': './assets/black-king.png' },
+    { 'piece': 'blackKing', 'location': 'a1', 'src': './assets/black-king.png' },
+    { 'piece': 'blackKing', 'location': 'a1', 'src': './assets/black-king.png' },
+    { 'piece': 'blackKing', 'location': 'a1', 'src': './assets/black-king.png' },
+    { 'piece': 'blackKing', 'location': 'a1', 'src': './assets/black-king.png' },
+]
