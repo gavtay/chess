@@ -6,3 +6,9 @@
     width: 12.5%;
     text-align: center;
 }
+
+@media screen and (max-width: 750px){
+    .boardletters-container {
+        display: none;
+    }
+}

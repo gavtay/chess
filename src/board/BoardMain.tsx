@@ -1,6 +1,7 @@
 import './BoardMain.css'
 import BoardCol from './BoardCol';
-import BoardLetters from './BoardLetters';
+import BoardLetters from './labels/BoardLetters';
+import BoardNumbers from './labels/BoardNumbers';
 
 export interface BoardRowProps {
     colVal: number
@@ -21,16 +22,19 @@ function BoardMain() {
 
     return (
         <>
+            <BoardNumbers/>
             <div className='main-container'>
-                <div className='board-main'>
-                    <BoardCol colVal={even} colLet={colA}/>
-                    <BoardCol colVal={odd} colLet={colA}/>
-                    <BoardCol colVal={even} colLet={colA}/>
-                    <BoardCol colVal={odd} colLet={colA}/>
-                    <BoardCol colVal={even} colLet={colA}/>
-                    <BoardCol colVal={odd} colLet={colA}/>
-                    <BoardCol colVal={even} colLet={colA}/>
-                    <BoardCol colVal={odd} colLet={colA}/>
+                <div className='label-board-container'>
+                    <div className='board-main'>
+                        <BoardCol colVal={even} colLet={colA}/>
+                        <BoardCol colVal={odd} colLet={colA}/>
+                        <BoardCol colVal={even} colLet={colA}/>
+                        <BoardCol colVal={odd} colLet={colA}/>
+                        <BoardCol colVal={even} colLet={colA}/>
+                        <BoardCol colVal={odd} colLet={colA}/>
+                        <BoardCol colVal={even} colLet={colA}/>
+                        <BoardCol colVal={odd} colLet={colA}/>
+                    </div>
                 </div>
                 <div>
                     <BoardLetters/>

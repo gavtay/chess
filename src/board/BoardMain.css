@@ -1,5 +1,6 @@
-.main-container {
 
+.label-board-container {
+    display: flex;
 }
 
 .board-main {
