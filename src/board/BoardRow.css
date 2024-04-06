@@ -1,6 +1,5 @@
 .row-container {
     height: 12.5%;
     width: 100%;
-    background-color: pink;
-    border: 1px solid black;
+    display: flex;
 }

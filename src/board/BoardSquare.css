@@ -1,0 +1,11 @@
+.square-container {
+    height: 100%;
+    width: 12.5%;
+}
+
+#square-color-white {
+    background-color: #eeeed2;
+}
+#square-color-black {
+    background-color: #769656;
+}
