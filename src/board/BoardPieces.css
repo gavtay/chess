@@ -7,4 +7,6 @@
 
 .piece-img {
     height: 80%;
+    width: 80%;
+    cursor: pointer;
 }

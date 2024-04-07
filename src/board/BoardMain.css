@@ -11,9 +11,13 @@
     border: 1px solid #000;
     display: flex;
 }
+@media screen and (max-width: 1200px) {
+    .board-main {
+        width: 60vw;
+    }
+}
 @media screen and (max-width: 750px){
     .board-main {
-        height: 80vh;
         width: 98vw
     }
 }
