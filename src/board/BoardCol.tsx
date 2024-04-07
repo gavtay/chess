@@ -26,14 +26,14 @@ const BoardRow: FunctionComponent<BoardRowProps> = (props): JSX.Element => {
             return (
                 <>
                     <div id='even-col' className='col-container'>
-                        <BoardSquare colLet={props.colLet} rowNum={rowOne} squareColor={squareColorWhite}/>
-                        <BoardSquare colLet={props.colLet} rowNum={rowTwo} squareColor={squareColorBlack}/>
-                        <BoardSquare colLet={props.colLet} rowNum={rowThree} squareColor={squareColorWhite}/>
-                        <BoardSquare colLet={props.colLet} rowNum={rowFour} squareColor={squareColorBlack}/>
-                        <BoardSquare colLet={props.colLet} rowNum={rowFive} squareColor={squareColorWhite}/>
-                        <BoardSquare colLet={props.colLet} rowNum={rowSix} squareColor={squareColorBlack}/>
-                        <BoardSquare colLet={props.colLet} rowNum={rowSeven} squareColor={squareColorWhite}/>
-                        <BoardSquare colLet={props.colLet} rowNum={rowEight} squareColor={squareColorBlack}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowEight} squareColor={squareColorWhite}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowSeven} squareColor={squareColorBlack}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowSix} squareColor={squareColorWhite}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowFive} squareColor={squareColorBlack}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowFour} squareColor={squareColorWhite}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowThree} squareColor={squareColorBlack}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowTwo} squareColor={squareColorWhite}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowOne} squareColor={squareColorBlack}/>
                     </div>
                 </>
             )
@@ -41,14 +41,14 @@ const BoardRow: FunctionComponent<BoardRowProps> = (props): JSX.Element => {
             return (
                 <>
                     <div id='odd-col' className='col-container'>
-                        <BoardSquare colLet={props.colLet} rowNum={rowOne} squareColor={squareColorBlack}/>
-                        <BoardSquare colLet={props.colLet} rowNum={rowTwo} squareColor={squareColorWhite}/>
-                        <BoardSquare colLet={props.colLet} rowNum={rowThree} squareColor={squareColorBlack}/>
-                        <BoardSquare colLet={props.colLet} rowNum={rowFour} squareColor={squareColorWhite}/>
-                        <BoardSquare colLet={props.colLet} rowNum={rowFive} squareColor={squareColorBlack}/>
-                        <BoardSquare colLet={props.colLet} rowNum={rowSix} squareColor={squareColorWhite}/>
-                        <BoardSquare colLet={props.colLet} rowNum={rowSeven} squareColor={squareColorBlack}/>
-                        <BoardSquare colLet={props.colLet} rowNum={rowEight} squareColor={squareColorWhite}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowEight} squareColor={squareColorBlack}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowSeven} squareColor={squareColorWhite}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowSix} squareColor={squareColorBlack}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowFive} squareColor={squareColorWhite}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowFour} squareColor={squareColorBlack}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowThree} squareColor={squareColorWhite}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowTwo} squareColor={squareColorBlack}/>
+                        <BoardSquare colLet={props.colLet} rowNum={rowOne} squareColor={squareColorWhite}/>
                     </div>
                 </>
             )

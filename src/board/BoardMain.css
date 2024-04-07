@@ -6,6 +6,8 @@
 .board-main {
     height: 80vh;
     width: 45vw;
+    max-height: 800px;
+    max-width: 800px;
     border: 1px solid #000;
     display: flex;
 }

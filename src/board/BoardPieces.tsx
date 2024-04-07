@@ -1,5 +1,6 @@
-import './BoardPieces.css'
 import { boardPieces } from '../boardPiecesData';
+import { useEffect } from 'react';
+import './BoardPieces.css'
 
 function BoardPieces() {
 
@@ -8,18 +9,22 @@ function BoardPieces() {
             let pieceLocation: string = piece.location;
             let pieceImgSrc: string = piece.src;
             let pieceName: string = piece.name;
-            let pieceParentLocation = document.getElementsByClassName(pieceLocation);
-
-            console.log(pieceParentLocation[0]);
-
+            
+            let pieceParentCollection = document.getElementsByClassName(pieceLocation);
+            const divElement = document.createElement('div');
             const pieceElement = document.createElement('img');
+            divElement.setAttribute('class', 'piece-container');
             pieceElement.setAttribute('class', 'piece-img');
             pieceElement.setAttribute('id', pieceName);
             pieceElement.setAttribute('src', pieceImgSrc);
 
-            // console.log(pieceElement);
-
-            // pieceParentLocation.appendChild(pieceElement);
+            
+            useEffect(() => {
+                let pieceParentElement = pieceParentCollection[0];
+                divElement.appendChild(pieceElement);
+                
+                pieceParentElement.append(divElement);
+            })
         });
     }
 
