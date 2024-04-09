@@ -1,4 +1,6 @@
 import { useEffect, useState} from 'react';
+import { selectPiece } from '../scripts/movePiece';
+import { selectMove } from '../scripts/movePiece';
 import './BoardPieces.css'
 
 interface Piece {
@@ -9,6 +11,9 @@ interface Piece {
 
 function BoardPieces() {
     const [piecePlacement, setPiecePlacement] = useState<Piece[]>([]);
+    const [colorSquare, setColorSquare] = useState(false);
+    const [selectedPiece, setSelectedPiece] = useState('');
+    const [isClicked, setIsClicked] = useState(false);
 
     useEffect(() => {
         setPiecePlacement([
@@ -57,21 +62,29 @@ function BoardPieces() {
             const { name, location, src } = piece;
             
             const pieceParentCollection = document.getElementsByClassName(location);
+            let pieceParentElement = pieceParentCollection[0];
             const divElement = document.createElement('div');
             const pieceElement = document.createElement('img');
             divElement.setAttribute('class', 'piece-container');
             pieceElement.setAttribute('class', 'piece-img');
             pieceElement.setAttribute('id', name);
             pieceElement.setAttribute('src', src);
-            pieceElement.setAttribute('onclick', "console.log('clicking piece')");
+
+            pieceElement.addEventListener('click', (event) => {
+                setColorSquare(!colorSquare);
+                let squareColor = selectPiece(event, isClicked, setIsClicked, setSelectedPiece, pieceParentElement);
+                event.stopPropagation;
+
+                document.addEventListener('click', (e) => {
+                    selectMove(e, selectedPiece, piecePlacement, setPiecePlacement, isClicked, setIsClicked, squareColor);
+                })
+            })
             
-            let pieceParentElement = pieceParentCollection[0];
             divElement.appendChild(pieceElement);
-            
             pieceParentElement.append(divElement);
         });
     }
-    
+
     return null;
 }
 export default BoardPieces;
