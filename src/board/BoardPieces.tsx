@@ -52,7 +52,7 @@ function BoardPieces() {
             { 'name': 'whitePawnEight', 'location': 'h2', 'src': '/src/assets/white-pawn.png' }
         ]);
     }, []);
-
+    
     useEffect(() => {
         renderPieces();
     }, [piecePlacement]);
@@ -63,6 +63,11 @@ function BoardPieces() {
             
             const pieceParentCollection = document.getElementsByClassName(location);
             let pieceParentElement = pieceParentCollection[0];
+
+            if (pieceParentElement.hasChildNodes()) {
+                return;
+            }
+
             const divElement = document.createElement('div');
             const pieceElement = document.createElement('img');
             divElement.setAttribute('class', 'piece-container');
@@ -73,10 +78,11 @@ function BoardPieces() {
             pieceElement.addEventListener('click', (event) => {
                 setColorSquare(!colorSquare);
                 let squareColor = selectPiece(event, isClicked, setIsClicked, setSelectedPiece, pieceParentElement);
-                event.stopPropagation;
+                event.stopPropagation();
 
                 document.addEventListener('click', (e) => {
                     selectMove(e, selectedPiece, piecePlacement, setPiecePlacement, isClicked, setIsClicked, squareColor);
+                    console.log('move piece');
                 })
             })
             
