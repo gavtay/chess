@@ -21,10 +21,9 @@ export function selectMove(event: any, piecePlacement: any, setPiecePlacement: a
     });
     piecesLocation = piecesLocation[0].location;
 
-        if (squareLocation.id === 'square-color-black' || squareLocation.id === 'square-color-white') {
-            console.log('This is a square');
-            console.log('Move the piece to this square');
+    console.log(pieceName + ' to ' + squareLocation.classList[1])
 
+        if (squareLocation.id === 'square-color-black' || squareLocation.id === 'square-color-white') {
             // change the color of the pieces original square here
             let originalSquare = Array.from(document.getElementsByClassName(piecesLocation) as HTMLCollectionOf<HTMLElement>)
             originalSquare[0].style.backgroundColor = squareColor;

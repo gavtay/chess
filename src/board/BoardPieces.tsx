@@ -82,7 +82,6 @@ function BoardPieces() {
 
                 document.addEventListener('click', (e) => {
                     selectMove(e, piecePlacement, setPiecePlacement, isClicked, setIsClicked, squareColor, pieceName);
-                    console.log('move piece');
                 })
             })
             
