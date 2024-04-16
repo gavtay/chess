@@ -11,8 +11,8 @@ interface Piece {
 
 function BoardPieces() {
     const [piecePlacement, setPiecePlacement] = useState<Piece[]>([]);
-    const [colorSquare, setColorSquare] = useState(false);
     const [selectedPiece, setSelectedPiece] = useState('');
+    const [selectedSquare, setSelectedSquare] = useState({color: '', location: ''});
     const [isClicked, setIsClicked] = useState(false);
 
     useEffect(() => {
@@ -75,15 +75,16 @@ function BoardPieces() {
             pieceElement.setAttribute('id', name);
             pieceElement.setAttribute('src', src);
 
-            pieceElement.addEventListener('click', (event) => {
-                setColorSquare(!colorSquare);
-                let [squareColor, pieceName] = selectPiece(event, isClicked, setIsClicked, setSelectedPiece, pieceParentElement);
-                event.stopPropagation();
-
-                document.addEventListener('click', (e) => {
-                    selectMove(e, piecePlacement, setPiecePlacement, isClicked, setIsClicked, squareColor, pieceName);
+            if (isClicked === false) {
+                pieceElement.addEventListener('click', (event) => {
+                    selectPiece(event, isClicked, setIsClicked, setSelectedSquare, setSelectedPiece, pieceParentElement);
+                    event.stopPropagation();
+                    
+                    document.addEventListener('click', (e) => {
+                        selectMove(e, piecePlacement, setPiecePlacement, selectedSquare, selectedPiece);
+                    })
                 })
-            })
+            }
             
             divElement.appendChild(pieceElement);
             pieceParentElement.append(divElement);
