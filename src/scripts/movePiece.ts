@@ -28,12 +28,15 @@ export function selectMove(event: any, piecePlacement: any, setPiecePlacement: a
             // change the color of the pieces original square here
             let originalSquare = Array.from(document.getElementsByClassName(piecesLocation) as HTMLCollectionOf<HTMLElement>)
             originalSquare[0].style.backgroundColor = squareColor;
-
+            
+            // remove original piece
+            originalSquare[0].removeChild(originalSquare[0].firstChild!);
 
             // move the piece to desired empty square
             setPiecePlacement((piecePlacement: any) => {
                 return piecePlacement.map((piece: any) => {
                     if (piece.location === piecesLocation) {
+
                         return { ...piece, location: squareLocation.classList[1]}
                     }
                     return piece;
