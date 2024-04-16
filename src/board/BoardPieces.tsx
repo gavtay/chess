@@ -77,11 +77,11 @@ function BoardPieces() {
 
             pieceElement.addEventListener('click', (event) => {
                 setColorSquare(!colorSquare);
-                let squareColor = selectPiece(event, isClicked, setIsClicked, setSelectedPiece, pieceParentElement);
+                let [squareColor, pieceName] = selectPiece(event, isClicked, setIsClicked, setSelectedPiece, pieceParentElement);
                 event.stopPropagation();
 
                 document.addEventListener('click', (e) => {
-                    selectMove(e, selectedPiece, piecePlacement, setPiecePlacement, isClicked, setIsClicked, squareColor);
+                    selectMove(e, piecePlacement, setPiecePlacement, isClicked, setIsClicked, squareColor, pieceName);
                     console.log('move piece');
                 })
             })

@@ -1,30 +1,39 @@
-export function selectPiece(event: any, isClicked: any, setIsClicked: any, setSelectedPiece: any, parentElement: any) {
+export function selectPiece(event: any, isClicked: any, setIsClicked: any, setSelectedPiece: any, parentElement: any): [string, string] {
     let squareColor: string = '#eeeed2';
     if (parentElement.id === 'square-color-black') {
         squareColor = "#8f35b9";
     }
 
-    setSelectedPiece(event.target.id);
+    let pieceName: string = event.target.id;
     setIsClicked(!isClicked);
     parentElement.style.backgroundColor='#FF8FAB';
 
-    return squareColor;
+    return [squareColor, pieceName];
 }
 
-export function selectMove(event: any, selectedPiece: any, piecePlacement: any, setPiecePlacement: any, isClicked: any, setIsClicked: any, squareColor: string) {
+export function selectMove(event: any, piecePlacement: any, setPiecePlacement: any, isClicked: any, setIsClicked: any, squareColor: string, pieceName: string) {
     let squareLocation = event.target;
-    console.log(selectedPiece);
+
+    let piecesLocation = piecePlacement.filter((piece: any) => {
+        if (piece.name === pieceName) {
+            return piece.location;
+        }
+    });
+    piecesLocation = piecesLocation[0].location;
 
         if (squareLocation.id === 'square-color-black' || squareLocation.id === 'square-color-white') {
             console.log('This is a square');
             console.log('Move the piece to this square');
 
             // change the color of the pieces original square here
+            let originalSquare = Array.from(document.getElementsByClassName(piecesLocation) as HTMLCollectionOf<HTMLElement>)
+            originalSquare[0].style.backgroundColor = squareColor;
+
+
+            // move the piece to desired empty square
             setPiecePlacement((piecePlacement: any) => {
                 return piecePlacement.map((piece: any) => {
-                    // console.log(piece.location);
-                    // console.log(selectedPiece);
-                    if (piece.location === selectedPiece) {
+                    if (piece.location === piecesLocation) {
                         return { ...piece, location: squareLocation.classList[1]}
                     }
                     return piece;
